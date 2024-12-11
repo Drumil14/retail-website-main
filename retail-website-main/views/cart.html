@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart - Exclusive</title>
+    <link rel="stylesheet" href="/retail-website-main/public/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Exclusive</div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Catalog</a></li>
+          <li><a href="#cart">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="cart" class="cart">
+      <h2>Your Shopping Cart</h2>
+      <div id="cart-items"></div>
+      <h3 id="total-price">Total: $0.00</h3>
+      <button class="checkout-btn" onclick="goToCheckout()">
+        Proceed to Checkout
+      </button>
+    </section>
+
+    <footer class="footer">
+      <p>© 2024 Exclusive. All Rights Reserved.</p>
+    </footer>
+
+    <script src="/retail-website-main/public/js/cart.js"></script>
+  </body>
+</html>

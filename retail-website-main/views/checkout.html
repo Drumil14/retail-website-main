@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - Exclusive</title>
+    <link rel="stylesheet" href="/retail-website-main/public/css/style.css" />
+    <!-- Include PayPal SDK with your Client ID -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&components=buttons"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Exclusive</div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Catalog</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="checkout" class="checkout">
+      <h2>Checkout</h2>
+      <form id="checkout-form">
+        <h3>Billing Details</h3>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="text" placeholder="Shipping Address" required />
+        <input type="tel" placeholder="Phone Number" required />
+
+        <h3>Order Summary</h3>
+        <div id="order-summary"></div>
+        <h3 id="total-price">Total: $0.00</h3>
+
+        <h3>Payment Options</h3>
+        <div class="payment-options">
+          <label>
+            <input type="radio" name="payment" value="credit-card" required />
+            Credit/Debit Card
+          </label>
+          <div class="card-details hidden">
+            <input type="text" placeholder="Card Number" required />
+            <input type="text" placeholder="Cardholder Name" required />
+            <input type="month" placeholder="Expiry Date" required />
+            <input type="text" placeholder="CVV" required />
+          </div>
+          <label>
+            <input type="radio" name="payment" value="paypal" />
+            PayPal
+          </label>
+          <div id="paypal-button-container" class="hidden"></div>
+          <!-- PayPal button container -->
+          <label>
+            <input type="radio" name="payment" value="cod" />
+            Cash on Delivery
+          </label>
+        </div>
+
+        <button type="submit" class="place-order">Place Order</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p>© 2024 Exclusive. All Rights Reserved.</p>
+    </footer>
+
+    <script src="/retail-website-main/public/js/checkout.js"></script>
+
+    <style>
+      .hidden {
+        display: none;
+      }
+      .card-details {
+        margin: 10px 0;
+      }
+      .card-details input {
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
+  </body>
+</html>

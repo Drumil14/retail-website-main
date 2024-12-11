@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/retail-website-main/public/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Exclusive</div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="products" class="products">
+      <h2>Our Product Catalog</h2>
+      <div class="product-grid">
+        <div
+          class="product-card"
+          data-id="2"
+          data-name="Leather Handbag"
+          data-price="150.00"
+        >
+          <img
+            src="/retail-website-main/images/handbag.jpeg"
+            alt="Leather Handbag"
+          />
+          <h3>Leather Handbag</h3>
+          <p>$150.00</p>
+          <button onclick="addToCart(event)">Add to Cart</button>
+        </div>
+        <div
+          class="product-card"
+          data-id="4"
+          data-name="Macbook Pro 2"
+          data-price="699.00"
+        >
+          <img src="/retail-website-main/images/mac.webp" alt="Macbook Pro 2" />
+          <h3>Macbook Pro 2</h3>
+          <p>$699.00</p>
+          <button onclick="addToCart(event)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <div
+      id="notification"
+      style="
+        display: none;
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+      "
+    >
+      Product added to cart!
+    </div>
+
+    <footer class="footer">
+      <p>© 2024 Exclusive. All Rights Reserved.</p>
+    </footer>
+    <script src="/retail-website-main/public/js/catalog.js"></script>
+  </body>
+</html>
